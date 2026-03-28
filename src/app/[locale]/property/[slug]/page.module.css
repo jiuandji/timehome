@@ -1,0 +1,485 @@
+/* Property Detail Page */
+
+.detailPage {
+  min-height: 100vh;
+  background: var(--color-light-bg, #f8f7f4);
+}
+
+/* ── Gallery Hero ────────────────────────── */
+.gallerySection {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  overflow: hidden;
+  background: var(--color-navy, #1b2a4a);
+  margin-top: 60px;
+}
+
+.mainImage {
+  object-fit: cover;
+}
+
+.galleryOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  pointer-events: none;
+}
+
+.galleryBadge {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: var(--color-gold, #c9a96e);
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.galleryThumbs {
+  position: absolute;
+  bottom: 20px;
+  right: 24px;
+  display: flex;
+  gap: 8px;
+}
+
+.thumb {
+  width: 72px;
+  height: 52px;
+  border-radius: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+.thumb:hover,
+.thumbActive {
+  opacity: 1;
+  border-color: var(--color-gold, #c9a96e);
+}
+
+/* ── Content layout ──────────────────────── */
+.contentWrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 40px;
+}
+
+/* ── Breadcrumb ──────────────────────────── */
+.breadcrumb {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: rgba(27, 42, 74, 0.5);
+  margin-bottom: -16px;
+}
+
+.breadcrumb a {
+  color: rgba(27, 42, 74, 0.5);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-gold, #c9a96e);
+}
+
+.breadcrumbSep {
+  color: rgba(27, 42, 74, 0.25);
+}
+
+/* ── Main column ─────────────────────────── */
+.mainColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Title block */
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.propertyLocation {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: var(--color-gold, #c9a96e);
+  font-weight: 500;
+}
+
+.locationIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.propertyTitle {
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  color: var(--color-navy, #1b2a4a);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.propertyPrice {
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  font-size: 1.75rem;
+  color: var(--color-gold, #c9a96e);
+  font-weight: 700;
+  margin: 4px 0 0;
+}
+
+.propertyRef {
+  font-size: 0.8rem;
+  color: rgba(27, 42, 74, 0.4);
+  margin-top: 4px;
+}
+
+/* ── Specs grid ──────────────────────────── */
+.specsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1px;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.specItem {
+  background: #ffffff;
+  padding: 20px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.specIcon {
+  font-size: 1.4rem;
+}
+
+.specValue {
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-navy, #1b2a4a);
+}
+
+.specLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(27, 42, 74, 0.5);
+}
+
+/* ── Description ─────────────────────────── */
+.descriptionBlock {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.sectionLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-gold, #c9a96e);
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.sectionHeading {
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  font-size: 1.3rem;
+  color: var(--color-navy, #1b2a4a);
+  margin: 0 0 16px;
+}
+
+.descriptionText {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(27, 42, 74, 0.75);
+  margin: 0;
+}
+
+/* ── Features ────────────────────────────── */
+.featuresBlock {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.featuresList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--color-navy, #1b2a4a);
+}
+
+.featureCheck {
+  color: var(--color-gold, #c9a96e);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* ── Sidebar ─────────────────────────────── */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Contact card */
+.contactCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+  position: sticky;
+  top: 100px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.contactTitle {
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  font-size: 1.2rem;
+  color: var(--color-navy, #1b2a4a);
+  margin: 0 0 8px;
+}
+
+.contactSubtitle {
+  font-size: 0.9rem;
+  color: rgba(27, 42, 74, 0.6);
+  margin: 0 0 24px;
+  line-height: 1.4;
+}
+
+.contactWhatsApp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px;
+  background: #25D366;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-bottom: 12px;
+}
+
+.contactWhatsApp:hover {
+  background: #1ebe57;
+}
+
+.contactWhatsApp svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.contactPhone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  color: var(--color-navy, #1b2a4a);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 12px;
+}
+
+.contactPhone:hover {
+  background: var(--color-navy, #1b2a4a);
+  color: #ffffff;
+}
+
+.contactEmail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  color: var(--color-navy, #1b2a4a);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.contactEmail:hover {
+  background: var(--color-navy, #1b2a4a);
+  color: #ffffff;
+}
+
+.contactDivider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 0;
+  color: rgba(27, 42, 74, 0.3);
+  font-size: 0.8rem;
+}
+
+.contactDivider::before,
+.contactDivider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* Agent mini card */
+.agentCard {
+  background: var(--color-light-bg, #f8f7f4);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.agentAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-navy, #1b2a4a);
+  color: var(--color-gold, #c9a96e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.agentInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.agentName {
+  font-weight: 600;
+  color: var(--color-navy, #1b2a4a);
+  font-size: 0.95rem;
+}
+
+.agentRole {
+  font-size: 0.8rem;
+  color: rgba(27, 42, 74, 0.5);
+}
+
+/* ── Similar properties ──────────────────── */
+.similarSection {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+.similarTitle {
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  font-size: 1.5rem;
+  color: var(--color-navy, #1b2a4a);
+  margin: 0 0 32px;
+  text-align: center;
+}
+
+.similarTitleAccent {
+  color: var(--color-gold, #c9a96e);
+  font-style: italic;
+}
+
+.similarGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ── Responsive ──────────────────────────── */
+@media (max-width: 1024px) {
+  .contentWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    order: -1;
+  }
+
+  .contactCard {
+    position: static;
+  }
+
+  .similarGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallerySection {
+    height: 360px;
+  }
+
+  .specsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featuresList {
+    grid-template-columns: 1fr;
+  }
+
+  .similarGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .contentWrapper {
+    padding: 24px 16px 60px;
+  }
+}

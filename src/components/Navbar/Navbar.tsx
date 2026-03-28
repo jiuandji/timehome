@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { useRouter, usePathname } from "@/i18n/navigation";
+import { useRouter, usePathname, Link } from "@/i18n/navigation";
 import styles from "./Navbar.module.css";
 
 const languages = [
@@ -23,11 +23,11 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "#properties", label: t("properties") },
-    { href: "#about", label: t("about") },
-    { href: "#areas", label: t("areas") },
-    { href: "#testimonials", label: t("testimonials") },
-    { href: "#contact", label: t("contact") },
+    { href: "/properties", label: t("properties") },
+    { href: "/#about", label: t("about") },
+    { href: "/#areas", label: t("areas") },
+    { href: "/#testimonials", label: t("testimonials") },
+    { href: "/contact", label: t("contact") },
   ];
 
   useEffect(() => {
@@ -44,19 +44,19 @@ export default function Navbar() {
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
         {/* Logo */}
-        <a href={`/${locale}`} className={styles.logo}>
+        <Link href="/" className={styles.logo}>
           <span className={styles.logoTime}>TIME</span>
           <span className={styles.logoHome}>HOME</span>
           <span className={styles.logoRealty}>REALTY</span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <ul className={styles.navLinks}>
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className={styles.navLink}>
+              <Link href={link.href as any} className={styles.navLink}>
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -99,14 +99,14 @@ export default function Navbar() {
       {menuOpen && (
         <div className={styles.mobileMenu}>
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
-              href={link.href}
+              href={link.href as any}
               className={styles.mobileLink}
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
           <div className={styles.mobileLangs}>
             {languages.map((lang) => (

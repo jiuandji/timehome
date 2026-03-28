@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -34,20 +35,20 @@ export default function Footer() {
           {/* Quick Links */}
           <div className={styles.column}>
             <h4 className={styles.columnTitle}>{t("explore")}</h4>
-            <a href="#properties" className={styles.link}>{t("allProperties")}</a>
-            <a href="#" className={styles.link}>{t("villas")}</a>
-            <a href="#" className={styles.link}>{t("apartments")}</a>
-            <a href="#areas" className={styles.link}>{t("areaGuide")}</a>
-            <a href="#" className={styles.link}>{t("buyGuide")}</a>
+            <Link href="/properties" className={styles.link}>{t("allProperties")}</Link>
+            <Link href="/" className={styles.link}>{t("villas")}</Link>
+            <Link href="/" className={styles.link}>{t("apartments")}</Link>
+            <Link href="/#areas" className={styles.link}>{t("areaGuide")}</Link>
+            <Link href="/" className={styles.link}>{t("buyGuide")}</Link>
           </div>
 
           {/* Company */}
           <div className={styles.column}>
             <h4 className={styles.columnTitle}>{t("company")}</h4>
-            <a href="#about" className={styles.link}>{t("aboutUs")}</a>
-            <a href="#testimonials" className={styles.link}>{t("reviews")}</a>
-            <a href="#" className={styles.link}>{t("blog")}</a>
-            <a href="#" className={styles.link}>{t("terms")}</a>
+            <Link href="/#about" className={styles.link}>{t("aboutUs")}</Link>
+            <Link href="/#testimonials" className={styles.link}>{t("reviews")}</Link>
+            <Link href="/" className={styles.link}>{t("blog")}</Link>
+            <Link href="/" className={styles.link}>{t("terms")}</Link>
           </div>
 
           {/* Contact */}
@@ -78,9 +79,9 @@ export default function Footer() {
             © {new Date().getFullYear()} TIME HOME REALTY. {t("copyright")}
           </p>
           <div className={styles.legal}>
-            <a href="#" className={styles.legalLink}>{t("privacy")}</a>
-            <a href="#" className={styles.legalLink}>{t("cookies")}</a>
-            <a href="#" className={styles.legalLink}>{t("legal")}</a>
+            <Link href="/" className={styles.legalLink}>{t("privacy")}</Link>
+            <Link href="/" className={styles.legalLink}>{t("cookies")}</Link>
+            <Link href="/" className={styles.legalLink}>{t("legal")}</Link>
           </div>
         </div>
       </div>

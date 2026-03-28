@@ -1,6 +1,8 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 import styles from "./PropertyCard.module.css";
 
 interface PropertyCardProps {
@@ -12,6 +14,7 @@ interface PropertyCardProps {
   baths: number;
   area: number;
   tag?: string;
+  slug?: string;
 }
 
 export default function PropertyCard({
@@ -23,13 +26,17 @@ export default function PropertyCard({
   baths,
   area,
   tag,
+  slug,
 }: PropertyCardProps) {
   const t = useTranslations("properties");
+  const locale = useLocale();
+
+  const detailHref = slug ? `/property/${slug}` : "#";
 
   return (
     <article className={styles.card}>
       <div className={styles.imageWrapper}>
-        <img src={image} alt={title} className={styles.image} loading="lazy" />
+        <Image src={image} alt={title} className={styles.image} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px" />
         {tag && <span className={styles.badge}>{tag}</span>}
       </div>
 
@@ -67,9 +74,10 @@ export default function PropertyCard({
 
         <div className={styles.footer}>
           <span className={styles.price}>{price}</span>
-          <a href="#" className={styles.viewBtn}>{t("details")} →</a>
+          <Link href={detailHref as any} className={styles.viewBtn}>{t("details")} →</Link>
         </div>
       </div>
     </article>
   );
 }
+
