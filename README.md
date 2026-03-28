@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TimeHome Realty — Premium Real Estate Platform
+
+> Luxury real estate agency on Costa Brava — world-class multilingual website
+
+## Tech Stack
+- **Framework:** Next.js 15 (App Router)
+- **Styling:** CSS Modules + CSS Custom Properties
+- **CMS:** Sanity.io
+- **Images:** Cloudinary
+- **Maps:** Mapbox GL JS
+- **i18n:** next-intl (5 languages: ES, EN, RU, PT, ZH)
+- **Hosting:** Vercel
+- **Analytics:** Plausible (GDPR-compliant)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+├── app/
+│   ├── [locale]/           # Locale-based routing
+│   │   ├── layout.tsx      # Root layout per locale
+│   │   ├── page.tsx        # Homepage
+│   │   ├── properties/     # Property listings
+│   │   ├── property/[slug] # Property detail
+│   │   ├── areas/          # Area guides
+│   │   ├── about/          # About page
+│   │   ├── contact/        # Contact page
+│   │   └── blog/           # Blog
+│   └── api/                # API routes
+├── components/
+│   ├── ui/                 # Atoms: buttons, inputs, badges
+│   ├── layout/             # Organisms: navbar, footer, sidebar
+│   └── sections/           # Sections: hero, testimonials, features
+├── lib/
+│   ├── sanity/             # Sanity client & queries
+│   ├── cloudinary/         # Image optimization
+│   └── utils/              # Helpers
+├── styles/
+│   ├── globals.css         # Design tokens & base styles
+│   └── variables.css       # CSS custom properties
+├── messages/               # i18n translations
+│   ├── en.json
+│   ├── es.json
+│   ├── ru.json
+│   ├── pt.json
+│   └── zh.json
+└── types/
+    └── property.ts         # TypeScript types
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Design System
 
-## Learn More
+- **Primary:** Navy `#1B2838` + Gold `#C9A96E`
+- **Typography:** Playfair Display (headings) + Inter (body)
+- **Grid:** 12 columns, max-width 1440px
+- **Base unit:** 8px
 
-To learn more about Next.js, take a look at the following resources:
+## Performance Budget
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Metric | Target |
+|---|---|
+| Lighthouse Score | ≥ 95 |
+| LCP | < 1.5s |
+| CLS | < 0.05 |
+| Page Weight | < 1.5MB |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Languages
 
-## Deploy on Vercel
+| Code | Language | Status |
+|---|---|---|
+| es | Español | Primary |
+| en | English | Active |
+| ru | Русский | Active |
+| pt | Português | Active |
+| zh | 中文 | Active |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+Private — TimeHome Realty © 2026
