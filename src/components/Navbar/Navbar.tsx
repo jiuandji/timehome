@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations, useLocale } from "next-intl";
+import { useRouter, usePathname } from "@/i18n/navigation";
 import styles from "./Navbar.module.css";
 
 const languages = [
@@ -9,20 +11,24 @@ const languages = [
   { code: "ru", flag: "🇷🇺", label: "RU" },
   { code: "pt", flag: "🇵🇹", label: "PT" },
   { code: "zh", flag: "🇨🇳", label: "ZH" },
-];
-
-const navLinks = [
-  { href: "#properties", label: "Propiedades" },
-  { href: "#about", label: "Sobre nosotros" },
-  { href: "#areas", label: "Zonas" },
-  { href: "#testimonials", label: "Opiniones" },
-  { href: "#contact", label: "Contacto" },
-];
+] as const;
 
 export default function Navbar() {
+  const t = useTranslations("nav");
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeLang, setActiveLang] = useState("es");
+
+  const navLinks = [
+    { href: "#properties", label: t("properties") },
+    { href: "#about", label: t("about") },
+    { href: "#areas", label: t("areas") },
+    { href: "#testimonials", label: t("testimonials") },
+    { href: "#contact", label: t("contact") },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
@@ -30,11 +36,15 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  function switchLocale(newLocale: string) {
+    router.replace(pathname, { locale: newLocale as "es" | "en" | "ru" | "pt" | "zh" });
+  }
+
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
         {/* Logo */}
-        <a href="/" className={styles.logo}>
+        <a href={`/${locale}`} className={styles.logo}>
           <span className={styles.logoTime}>TIME</span>
           <span className={styles.logoHome}>HOME</span>
           <span className={styles.logoRealty}>REALTY</span>
@@ -58,8 +68,8 @@ export default function Navbar() {
             {languages.map((lang) => (
               <button
                 key={lang.code}
-                className={`${styles.langBtn} ${activeLang === lang.code ? styles.langActive : ""}`}
-                onClick={() => setActiveLang(lang.code)}
+                className={`${styles.langBtn} ${locale === lang.code ? styles.langActive : ""}`}
+                onClick={() => switchLocale(lang.code)}
                 aria-label={`Switch to ${lang.label}`}
               >
                 <span className={styles.flag}>{lang.flag}</span>
@@ -102,8 +112,11 @@ export default function Navbar() {
             {languages.map((lang) => (
               <button
                 key={lang.code}
-                className={`${styles.langBtn} ${activeLang === lang.code ? styles.langActive : ""}`}
-                onClick={() => setActiveLang(lang.code)}
+                className={`${styles.langBtn} ${locale === lang.code ? styles.langActive : ""}`}
+                onClick={() => {
+                  switchLocale(lang.code);
+                  setMenuOpen(false);
+                }}
               >
                 {lang.flag} {lang.label}
               </button>

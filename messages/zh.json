@@ -1,0 +1,101 @@
+{
+  "nav": {
+    "properties": "房产",
+    "about": "关于我们",
+    "areas": "区域",
+    "testimonials": "客户评价",
+    "contact": "联系我们"
+  },
+  "hero": {
+    "tagline": "布拉瓦海岸最优质的房地产选择",
+    "title": "房地产公司",
+    "titleAccent": "TIME HOME REALTY",
+    "subtitle": "始于2017年 · 76处房产 · 5种语言 · 全面法律咨询",
+    "searchWant": "我想",
+    "searchBuy": "购买",
+    "searchRent": "租赁",
+    "searchInvest": "投资",
+    "searchType": "类型",
+    "searchTypeAll": "所有类型",
+    "searchTypeVilla": "别墅",
+    "searchTypeApartment": "公寓",
+    "searchTypeTownhouse": "联排别墅",
+    "searchTypeCommercial": "商业场所",
+    "searchTypeLand": "土地",
+    "searchArea": "区域",
+    "searchAreaAll": "整个布拉瓦海岸",
+    "searchPrice": "最高价格",
+    "searchPriceAll": "不限",
+    "searchButton": "搜索",
+    "statReliability": "可靠性",
+    "statYears": "行业经验",
+    "statSatisfaction": "客户满意度",
+    "statSuccess": "成交率",
+    "scrollMore": "了解更多"
+  },
+  "properties": {
+    "tagline": "精选房产",
+    "title": "独家",
+    "titleAccent": "房源",
+    "subtitle": "我们目录中的每套房产都经过亲自验证，精心挑选，以确保品质、位置和卓越价值。",
+    "beds": "卧室",
+    "baths": "浴室",
+    "details": "详情",
+    "viewAll": "查看全部76套房产"
+  },
+  "areas": {
+    "tagline": "位置",
+    "title": "我们的",
+    "titleAccent": "区域",
+    "subtitle": "我们在布拉瓦海岸最独家的区域运营——从普拉特哈德阿罗到巴塞罗那。",
+    "propertiesCount": "{count} 套房产"
+  },
+  "about": {
+    "tagline": "我们的优势",
+    "title": "我们只与经过认证的房产机构",
+    "titleAccent": "合作",
+    "description": "Time Home Realty是一家专业从事各类房地产买卖和租赁的房产经纪公司。我们对市场有着深入的了解，在处理房地产交易中可能出现的各种困难方面拥有丰富的经验。我们的方法基于清晰有效的策略，使我们能够针对任何复杂程度提供精确的解决方案。",
+    "langTitle": "5种语言",
+    "langText": "我们会说西班牙语、英语、俄语、葡萄牙语和中文。您的语言，您的舒适。",
+    "certTitle": "认证机构",
+    "certText": "我们只与认证机构合作，为最挑剔的客户保证安全和品质。",
+    "legalTitle": "全面咨询",
+    "legalText": "NIE、合同、公证、银行账户——我们处理所有繁琐手续，让您专注于选择梦想家园。",
+    "teamTitle": "我们的专家",
+    "teamSubtitle": "我们的专家将在买卖的每个阶段为您提供建议",
+    "teamRole": "房地产专家"
+  },
+  "testimonials": {
+    "tagline": "客户评价",
+    "title": "找到理想家园的",
+    "titleAccent": "家庭故事"
+  },
+  "footer": {
+    "description": "布拉瓦海岸高端房产经纪公司。自2017年起，帮助国际家庭找到梦想家园。",
+    "langNote": "我们会说您的语言",
+    "explore": "探索",
+    "allProperties": "所有房产",
+    "villas": "别墅",
+    "apartments": "公寓",
+    "areaGuide": "区域指南",
+    "buyGuide": "购买指南",
+    "company": "公司",
+    "aboutUs": "关于我们",
+    "reviews": "评价",
+    "blog": "博客与文章",
+    "terms": "条款和条件",
+    "contactTitle": "联系方式",
+    "whatsapp": "WhatsApp",
+    "schedule": "营业时间",
+    "weekdays": "周一至周六：10:00–14:00 和 15:00–19:00",
+    "sundays": "周日：需预约",
+    "copyright": "版权所有。",
+    "privacy": "隐私政策",
+    "cookies": "Cookie政策",
+    "legal": "法律声明"
+  },
+  "whatsapp": {
+    "tooltip": "有问题吗？",
+    "message": "您好，我想了解布拉瓦海岸的房产信息"
+  }
+}

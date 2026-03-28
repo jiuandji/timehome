@@ -1,0 +1,101 @@
+{
+  "nav": {
+    "properties": "Imóveis",
+    "about": "Sobre nós",
+    "areas": "Zonas",
+    "testimonials": "Opiniões",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "tagline": "A melhor opção imobiliária em toda a Costa Brava",
+    "title": "Imobiliária",
+    "titleAccent": "TIME HOME REALTY",
+    "subtitle": "Desde 2017 · 76 imóveis · 5 idiomas · Assessoria jurídica completa",
+    "searchWant": "Quero",
+    "searchBuy": "Comprar",
+    "searchRent": "Arrendar",
+    "searchInvest": "Investir",
+    "searchType": "Tipo",
+    "searchTypeAll": "Todos os tipos",
+    "searchTypeVilla": "Moradia / Villa",
+    "searchTypeApartment": "Apartamento",
+    "searchTypeTownhouse": "Geminado",
+    "searchTypeCommercial": "Espaço comercial",
+    "searchTypeLand": "Terreno",
+    "searchArea": "Zona",
+    "searchAreaAll": "Toda a Costa Brava",
+    "searchPrice": "Preço máximo",
+    "searchPriceAll": "Sem limite",
+    "searchButton": "Procurar",
+    "statReliability": "Fiabilidade",
+    "statYears": "Anos no setor",
+    "statSatisfaction": "Satisfação",
+    "statSuccess": "Sucesso em fechos",
+    "scrollMore": "Descubra mais"
+  },
+  "properties": {
+    "tagline": "Propriedades Selecionadas",
+    "title": "Imóveis",
+    "titleAccent": "Exclusivos",
+    "subtitle": "Cada imóvel do nosso catálogo foi inspecionado pessoalmente e selecionado pela sua qualidade, localização e valor excecional.",
+    "beds": "Quartos",
+    "baths": "Casas B.",
+    "details": "Detalhes",
+    "viewAll": "Ver os 76 imóveis"
+  },
+  "areas": {
+    "tagline": "Localização",
+    "title": "As nossas",
+    "titleAccent": "zonas",
+    "subtitle": "Operamos nas zonas mais exclusivas da Costa Brava — de Platja d'Aro a Barcelona.",
+    "propertiesCount": "{count} imóveis"
+  },
+  "about": {
+    "tagline": "As nossas vantagens",
+    "title": "Trabalhamos exclusivamente com imobiliárias",
+    "titleAccent": "certificadas",
+    "description": "A Time Home Realty é uma agência imobiliária especializada na compra, venda e arrendamento de todos os tipos de imóveis. Temos um profundo conhecimento do mercado e vasta experiência na gestão das diversas dificuldades que podem surgir nas transações imobiliárias. A nossa metodologia, baseada em estratégias claras e eficazes, permite-nos oferecer soluções precisas perante qualquer nível de complexidade.",
+    "langTitle": "5 Idiomas",
+    "langText": "Falamos espanhol, inglês, russo, português e chinês. O seu idioma, o seu conforto, a sua confiança.",
+    "certTitle": "Agências Certificadas",
+    "certText": "Colaboramos exclusivamente com agências certificadas para garantir a segurança e qualidade para os clientes mais exigentes.",
+    "legalTitle": "Assessoria Completa",
+    "legalText": "NIE, contratos, notário, contas bancárias — tratamos de toda a burocracia para que se concentre em escolher a sua casa de sonho.",
+    "teamTitle": "As Especialistas",
+    "teamSubtitle": "As nossas especialistas irão aconselhá-lo em todas as etapas da compra e venda",
+    "teamRole": "Especialista Imobiliária"
+  },
+  "testimonials": {
+    "tagline": "O que dizem os nossos clientes",
+    "title": "Histórias de famílias que encontraram a sua",
+    "titleAccent": "casa de sonho"
+  },
+  "footer": {
+    "description": "Agência imobiliária premium na Costa Brava. Ajudamos famílias internacionais a encontrar a sua casa de sonho desde 2017.",
+    "langNote": "Falamos o seu idioma",
+    "explore": "Explorar",
+    "allProperties": "Todos os imóveis",
+    "villas": "Moradias e villas",
+    "apartments": "Apartamentos",
+    "areaGuide": "Guia de zonas",
+    "buyGuide": "Guia de compra",
+    "company": "Empresa",
+    "aboutUs": "Sobre nós",
+    "reviews": "Opiniões",
+    "blog": "Blog e artigos",
+    "terms": "Termos e condições",
+    "contactTitle": "Contacto",
+    "whatsapp": "WhatsApp",
+    "schedule": "Horário",
+    "weekdays": "Segunda a Sábado: 10:00–14:00 e 15:00–19:00",
+    "sundays": "Domingos: com marcação prévia",
+    "copyright": "Todos os direitos reservados.",
+    "privacy": "Política de Privacidade",
+    "cookies": "Política de Cookies",
+    "legal": "Aviso Legal"
+  },
+  "whatsapp": {
+    "tooltip": "Tem perguntas?",
+    "message": "Olá, gostaria de receber informações sobre propriedades na Costa Brava"
+  }
+}

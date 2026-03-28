@@ -1,0 +1,101 @@
+{
+  "nav": {
+    "properties": "Properties",
+    "about": "About Us",
+    "areas": "Areas",
+    "testimonials": "Reviews",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "The best real estate choice on the entire Costa Brava",
+    "title": "Real Estate Agency",
+    "titleAccent": "TIME HOME REALTY",
+    "subtitle": "Since 2017 · 76 properties · 5 languages · Full legal advisory",
+    "searchWant": "I want to",
+    "searchBuy": "Buy",
+    "searchRent": "Rent",
+    "searchInvest": "Invest",
+    "searchType": "Type",
+    "searchTypeAll": "All types",
+    "searchTypeVilla": "Villa / House",
+    "searchTypeApartment": "Apartment",
+    "searchTypeTownhouse": "Townhouse",
+    "searchTypeCommercial": "Commercial",
+    "searchTypeLand": "Land",
+    "searchArea": "Area",
+    "searchAreaAll": "All Costa Brava",
+    "searchPrice": "Max price",
+    "searchPriceAll": "No limit",
+    "searchButton": "Search",
+    "statReliability": "Reliability",
+    "statYears": "Years in the sector",
+    "statSatisfaction": "Satisfaction",
+    "statSuccess": "Closing success",
+    "scrollMore": "Discover more"
+  },
+  "properties": {
+    "tagline": "Featured Properties",
+    "title": "Exclusive",
+    "titleAccent": "Listings",
+    "subtitle": "Every property in our catalogue has been personally inspected and selected for its quality, location, and exceptional value.",
+    "beds": "Beds",
+    "baths": "Baths",
+    "details": "Details",
+    "viewAll": "View all 76 properties"
+  },
+  "areas": {
+    "tagline": "Location",
+    "title": "Our",
+    "titleAccent": "areas",
+    "subtitle": "We operate in the most exclusive areas of the Costa Brava — from Platja d'Aro to Barcelona.",
+    "propertiesCount": "{count} properties"
+  },
+  "about": {
+    "tagline": "Our Advantages",
+    "title": "We work exclusively with certified",
+    "titleAccent": "agencies",
+    "description": "Time Home Realty is a real estate agency specialising in the buying, selling, and renting of all types of property. We have deep market knowledge and extensive experience managing the various challenges that may arise during real estate transactions. Our methodology, based on clear and effective strategies, allows us to offer precise solutions regardless of complexity.",
+    "langTitle": "5 Languages",
+    "langText": "We speak Spanish, English, Russian, Portuguese, and Chinese. Your language, your comfort, your trust.",
+    "certTitle": "Certified Agencies",
+    "certText": "We work exclusively with certified agencies to guarantee the safety and quality for the most discerning clients.",
+    "legalTitle": "Full Advisory",
+    "legalText": "NIE, contracts, notary, bank accounts — we handle all the bureaucracy so you can focus on choosing your dream home.",
+    "teamTitle": "Our Specialists",
+    "teamSubtitle": "Our agency specialists will advise you at every stage of buying and selling",
+    "teamRole": "Real Estate Specialist"
+  },
+  "testimonials": {
+    "tagline": "What our clients say",
+    "title": "Stories of families who found their",
+    "titleAccent": "dream home"
+  },
+  "footer": {
+    "description": "Premium real estate agency on the Costa Brava. We help international families find their dream home since 2017.",
+    "langNote": "We speak your language",
+    "explore": "Explore",
+    "allProperties": "All properties",
+    "villas": "Villas & houses",
+    "apartments": "Apartments",
+    "areaGuide": "Area guide",
+    "buyGuide": "Buying guide",
+    "company": "Company",
+    "aboutUs": "About us",
+    "reviews": "Reviews",
+    "blog": "Blog & articles",
+    "terms": "Terms & conditions",
+    "contactTitle": "Contact",
+    "whatsapp": "WhatsApp",
+    "schedule": "Opening hours",
+    "weekdays": "Monday to Saturday: 10:00–14:00 and 15:00–19:00",
+    "sundays": "Sundays: by appointment",
+    "copyright": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy",
+    "legal": "Legal Notice"
+  },
+  "whatsapp": {
+    "tooltip": "Got questions?",
+    "message": "Hello, I would like to receive information about properties on the Costa Brava"
+  }
+}

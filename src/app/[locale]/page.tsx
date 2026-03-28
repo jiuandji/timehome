@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Navbar from "@/components/Navbar/Navbar";
 import Hero from "@/components/Hero/Hero";
 import PropertyCard from "@/components/PropertyCard/PropertyCard";
@@ -72,39 +73,19 @@ const featuredProperties = [
 ];
 
 const areas = [
-  {
-    name: "Platja d'Aro",
-    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=600&q=80",
-    count: 28,
-  },
-  {
-    name: "Begur",
-    image: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?w=600&q=80",
-    count: 12,
-  },
-  {
-    name: "Santa Cristina d'Aro",
-    image: "https://images.unsplash.com/photo-1602941525421-8f8b81d3edbb?w=600&q=80",
-    count: 8,
-  },
-  {
-    name: "Palamós",
-    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
-    count: 11,
-  },
-  {
-    name: "Sant Antoni de Calonge",
-    image: "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?w=600&q=80",
-    count: 9,
-  },
-  {
-    name: "Tossa de Mar",
-    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=600&q=80",
-    count: 8,
-  },
+  { name: "Platja d'Aro", image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=600&q=80", count: 28 },
+  { name: "Begur", image: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?w=600&q=80", count: 12 },
+  { name: "Santa Cristina d'Aro", image: "https://images.unsplash.com/photo-1602941525421-8f8b81d3edbb?w=600&q=80", count: 8 },
+  { name: "Palamós", image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80", count: 11 },
+  { name: "Sant Antoni de Calonge", image: "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?w=600&q=80", count: 9 },
+  { name: "Tossa de Mar", image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=600&q=80", count: 8 },
 ];
 
 export default function Home() {
+  const tProps = useTranslations("properties");
+  const tAreas = useTranslations("areas");
+  const tAbout = useTranslations("about");
+
   return (
     <>
       <Navbar />
@@ -114,13 +95,11 @@ export default function Home() {
       <section className={styles.propertiesSection} id="properties">
         <div className={styles.sectionContainer}>
           <div className={styles.sectionHeader}>
-            <p className={styles.tagline}>Propiedades Seleccionadas</p>
+            <p className={styles.tagline}>{tProps("tagline")}</p>
             <h2 className={styles.sectionTitle}>
-              Inmuebles <em className={styles.accent}>Exclusivos</em>
+              {tProps("title")} <em className={styles.accent}>{tProps("titleAccent")}</em>
             </h2>
-            <p className={styles.sectionSubtitle}>
-              Cada propiedad de nuestro catálogo ha sido inspeccionada personalmente y seleccionada por su calidad, ubicación y valor excepcional.
-            </p>
+            <p className={styles.sectionSubtitle}>{tProps("subtitle")}</p>
           </div>
 
           <div className={styles.propertyGrid}>
@@ -131,7 +110,7 @@ export default function Home() {
 
           <div className={styles.viewAll}>
             <a href="#" className={styles.viewAllBtn}>
-              Ver las 76 propiedades →
+              {tProps("viewAll")} →
             </a>
           </div>
         </div>
@@ -141,13 +120,11 @@ export default function Home() {
       <section className={styles.areasSection} id="areas">
         <div className={styles.sectionContainer}>
           <div className={styles.sectionHeader}>
-            <p className={styles.tagline}>Localidad</p>
+            <p className={styles.tagline}>{tAreas("tagline")}</p>
             <h2 className={styles.sectionTitle}>
-              Nuestras <em className={styles.accent}>zonas</em>
+              {tAreas("title")} <em className={styles.accent}>{tAreas("titleAccent")}</em>
             </h2>
-            <p className={styles.sectionSubtitle}>
-              Operamos en las zonas más exclusivas de la Costa Brava — desde Platja d&apos;Aro hasta Barcelona.
-            </p>
+            <p className={styles.sectionSubtitle}>{tAreas("subtitle")}</p>
           </div>
 
           <div className={styles.areasGrid}>
@@ -157,7 +134,9 @@ export default function Home() {
                 <div className={styles.areaOverlay} />
                 <div className={styles.areaContent}>
                   <h3 className={styles.areaName}>{area.name}</h3>
-                  <span className={styles.areaCount}>{area.count} propiedades</span>
+                  <span className={styles.areaCount}>
+                    {tAreas("propertiesCount", { count: area.count })}
+                  </span>
                 </div>
               </a>
             ))}
@@ -169,57 +148,47 @@ export default function Home() {
       <section className={styles.whySection} id="about">
         <div className={styles.sectionContainer}>
           <div className={styles.sectionHeader}>
-            <p className={styles.tagline}>Nuestras Ventajas</p>
+            <p className={styles.tagline}>{tAbout("tagline")}</p>
             <h2 className={styles.sectionTitle}>
-              Colaboramos exclusivamente con inmobiliarias{" "}
-              <em className={styles.accent}>certificadas</em>
+              {tAbout("title")}{" "}
+              <em className={styles.accent}>{tAbout("titleAccent")}</em>
             </h2>
           </div>
 
-          <p className={styles.aboutText}>
-            Time Home Realty es una agencia inmobiliaria especializada en la compraventa y arrendamiento de todo tipo de bienes raíces. Contamos con un profundo conocimiento del mercado y una amplia experiencia en la gestión de las diversas dificultades que pueden presentarse durante las transacciones inmobiliarias. Nuestra metodología, basada en estrategias claras y eficaces, nos permite ofrecer soluciones precisas ante cualquier nivel de complejidad.
-          </p>
+          <p className={styles.aboutText}>{tAbout("description")}</p>
 
           <div className={styles.whyGrid}>
             <div className={styles.whyCard}>
               <div className={styles.whyIcon}>🌍</div>
-              <h3 className={styles.whyTitle}>5 Idiomas</h3>
-              <p className={styles.whyText}>
-                Hablamos español, inglés, ruso, portugués y chino. Tu idioma, tu comodidad, tu confianza.
-              </p>
+              <h3 className={styles.whyTitle}>{tAbout("langTitle")}</h3>
+              <p className={styles.whyText}>{tAbout("langText")}</p>
             </div>
             <div className={styles.whyCard}>
               <div className={styles.whyIcon}>🤝</div>
-              <h3 className={styles.whyTitle}>Agencias Certificadas</h3>
-              <p className={styles.whyText}>
-                Colaboramos exclusivamente con inmobiliarias certificadas para garantizar la seguridad y la calidad para los clientes más exigentes.
-              </p>
+              <h3 className={styles.whyTitle}>{tAbout("certTitle")}</h3>
+              <p className={styles.whyText}>{tAbout("certText")}</p>
             </div>
             <div className={styles.whyCard}>
               <div className={styles.whyIcon}>⚖️</div>
-              <h3 className={styles.whyTitle}>Asesoramiento Completo</h3>
-              <p className={styles.whyText}>
-                NIE, contratos, notaría, cuentas bancarias — gestionamos toda la burocracia para que te centres en elegir tu hogar soñado.
-              </p>
+              <h3 className={styles.whyTitle}>{tAbout("legalTitle")}</h3>
+              <p className={styles.whyText}>{tAbout("legalText")}</p>
             </div>
           </div>
 
           {/* Team */}
           <div className={styles.teamSection}>
-            <p className={styles.teamTitle}>Las Especialistas</p>
-            <p className={styles.teamSubtitle}>
-              Nuestras especialistas de la agencia le asesorarán en todas las etapas de compraventa
-            </p>
+            <p className={styles.teamTitle}>{tAbout("teamTitle")}</p>
+            <p className={styles.teamSubtitle}>{tAbout("teamSubtitle")}</p>
             <div className={styles.teamGrid}>
               <div className={styles.teamCard}>
                 <div className={styles.teamAvatar}>O</div>
                 <h4 className={styles.teamName}>Oksana</h4>
-                <p className={styles.teamRole}>Especialista Inmobiliaria</p>
+                <p className={styles.teamRole}>{tAbout("teamRole")}</p>
               </div>
               <div className={styles.teamCard}>
                 <div className={styles.teamAvatar}>N</div>
                 <h4 className={styles.teamName}>Natali</h4>
-                <p className={styles.teamRole}>Especialista Inmobiliaria</p>
+                <p className={styles.teamRole}>{tAbout("teamRole")}</p>
               </div>
             </div>
           </div>

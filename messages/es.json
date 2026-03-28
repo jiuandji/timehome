@@ -1,0 +1,101 @@
+{
+  "nav": {
+    "properties": "Propiedades",
+    "about": "Sobre nosotros",
+    "areas": "Zonas",
+    "testimonials": "Opiniones",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "tagline": "La mejor opción inmobiliaria en toda la Costa Brava",
+    "title": "Inmobiliaria",
+    "titleAccent": "TIME HOME REALTY",
+    "subtitle": "Desde 2017 · 76 propiedades · 5 idiomas · Asesoramiento jurídico completo",
+    "searchWant": "Quiero",
+    "searchBuy": "Comprar",
+    "searchRent": "Alquilar",
+    "searchInvest": "Invertir",
+    "searchType": "Tipo",
+    "searchTypeAll": "Todos los tipos",
+    "searchTypeVilla": "Villa / Chalet",
+    "searchTypeApartment": "Apartamento",
+    "searchTypeTownhouse": "Adosado",
+    "searchTypeCommercial": "Local comercial",
+    "searchTypeLand": "Terreno",
+    "searchArea": "Zona",
+    "searchAreaAll": "Toda la Costa Brava",
+    "searchPrice": "Precio máximo",
+    "searchPriceAll": "Sin límite",
+    "searchButton": "Buscar",
+    "statReliability": "Fiabilidad",
+    "statYears": "Años en el sector",
+    "statSatisfaction": "Satisfacción",
+    "statSuccess": "Éxito en cierres",
+    "scrollMore": "Descubre más"
+  },
+  "properties": {
+    "tagline": "Propiedades Seleccionadas",
+    "title": "Inmuebles",
+    "titleAccent": "Exclusivos",
+    "subtitle": "Cada propiedad de nuestro catálogo ha sido inspeccionada personalmente y seleccionada por su calidad, ubicación y valor excepcional.",
+    "beds": "Dorm.",
+    "baths": "Baños",
+    "details": "Detalles",
+    "viewAll": "Ver las 76 propiedades"
+  },
+  "areas": {
+    "tagline": "Localidad",
+    "title": "Nuestras",
+    "titleAccent": "zonas",
+    "subtitle": "Operamos en las zonas más exclusivas de la Costa Brava — desde Platja d'Aro hasta Barcelona.",
+    "propertiesCount": "{count} propiedades"
+  },
+  "about": {
+    "tagline": "Nuestras Ventajas",
+    "title": "Colaboramos exclusivamente con inmobiliarias",
+    "titleAccent": "certificadas",
+    "description": "Time Home Realty es una agencia inmobiliaria especializada en la compraventa y arrendamiento de todo tipo de bienes raíces. Contamos con un profundo conocimiento del mercado y una amplia experiencia en la gestión de las diversas dificultades que pueden presentarse durante las transacciones inmobiliarias. Nuestra metodología, basada en estrategias claras y eficaces, nos permite ofrecer soluciones precisas ante cualquier nivel de complejidad.",
+    "langTitle": "5 Idiomas",
+    "langText": "Hablamos español, inglés, ruso, portugués y chino. Tu idioma, tu comodidad, tu confianza.",
+    "certTitle": "Agencias Certificadas",
+    "certText": "Colaboramos exclusivamente con inmobiliarias certificadas para garantizar la seguridad y la calidad para los clientes más exigentes.",
+    "legalTitle": "Asesoramiento Completo",
+    "legalText": "NIE, contratos, notaría, cuentas bancarias — gestionamos toda la burocracia para que te centres en elegir tu hogar soñado.",
+    "teamTitle": "Las Especialistas",
+    "teamSubtitle": "Nuestras especialistas de la agencia le asesorarán en todas las etapas de compraventa",
+    "teamRole": "Especialista Inmobiliaria"
+  },
+  "testimonials": {
+    "tagline": "Lo que dicen nuestros clientes",
+    "title": "Historias de familias que encontraron su",
+    "titleAccent": "hogar soñado"
+  },
+  "footer": {
+    "description": "Agencia inmobiliaria premium en la Costa Brava. Ayudamos a familias internacionales a encontrar su hogar soñado desde 2017.",
+    "langNote": "Hablamos tu idioma",
+    "explore": "Explorar",
+    "allProperties": "Todas las propiedades",
+    "villas": "Villas y chalets",
+    "apartments": "Apartamentos",
+    "areaGuide": "Guía de zonas",
+    "buyGuide": "Guía de compra",
+    "company": "Empresa",
+    "aboutUs": "Sobre nosotros",
+    "reviews": "Opiniones",
+    "blog": "Blog y artículos",
+    "terms": "Términos y condiciones",
+    "contactTitle": "Contacto",
+    "whatsapp": "WhatsApp",
+    "schedule": "Horario",
+    "weekdays": "Lunes a Sábado: 10:00–14:00 y 15:00–19:00",
+    "sundays": "Domingos: con cita previa",
+    "copyright": "Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "cookies": "Política de Cookies",
+    "legal": "Aviso Legal"
+  },
+  "whatsapp": {
+    "tooltip": "¿Tienes preguntas?",
+    "message": "Hola, me gustaría recibir información sobre propiedades en la Costa Brava"
+  }
+}

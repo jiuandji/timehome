@@ -1,52 +1,54 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
+  const t = useTranslations("hero");
+
   return (
     <section className={styles.hero} id="hero">
-      {/* Dark overlay for text readability */}
       <div className={styles.overlay} />
 
       <div className={styles.content}>
-        <p className={styles.tagline}>La mejor opción inmobiliaria en toda la Costa Brava</p>
+        <p className={styles.tagline}>{t("tagline")}</p>
         <h1 className={styles.title}>
-          Inmobiliaria{" "}
-          <em className={styles.accent}>TIME HOME REALTY</em>
+          {t("title")}{" "}
+          <em className={styles.accent}>{t("titleAccent")}</em>
         </h1>
-        <p className={styles.subtitle}>
-          Desde 2017 · 76 propiedades · 5 idiomas · Asesoramiento jurídico completo
-        </p>
+        <p className={styles.subtitle}>{t("subtitle")}</p>
 
         {/* Search Bar */}
         <div className={styles.searchBar}>
           <div className={styles.searchField}>
-            <label className={styles.searchLabel}>Quiero</label>
+            <label className={styles.searchLabel}>{t("searchWant")}</label>
             <select className={styles.searchSelect}>
-              <option>Comprar</option>
-              <option>Alquilar</option>
-              <option>Invertir</option>
+              <option>{t("searchBuy")}</option>
+              <option>{t("searchRent")}</option>
+              <option>{t("searchInvest")}</option>
             </select>
           </div>
 
           <div className={styles.divider} />
 
           <div className={styles.searchField}>
-            <label className={styles.searchLabel}>Tipo</label>
+            <label className={styles.searchLabel}>{t("searchType")}</label>
             <select className={styles.searchSelect}>
-              <option>Todos los tipos</option>
-              <option>Villa / Chalet</option>
-              <option>Apartamento</option>
-              <option>Adosado</option>
-              <option>Local comercial</option>
-              <option>Terreno</option>
+              <option>{t("searchTypeAll")}</option>
+              <option>{t("searchTypeVilla")}</option>
+              <option>{t("searchTypeApartment")}</option>
+              <option>{t("searchTypeTownhouse")}</option>
+              <option>{t("searchTypeCommercial")}</option>
+              <option>{t("searchTypeLand")}</option>
             </select>
           </div>
 
           <div className={styles.divider} />
 
           <div className={styles.searchField}>
-            <label className={styles.searchLabel}>Zona</label>
+            <label className={styles.searchLabel}>{t("searchArea")}</label>
             <select className={styles.searchSelect}>
-              <option>Toda la Costa Brava</option>
+              <option>{t("searchAreaAll")}</option>
               <option>Platja d&apos;Aro</option>
               <option>Begur</option>
               <option>Santa Cristina d&apos;Aro</option>
@@ -60,9 +62,9 @@ export default function Hero() {
           <div className={styles.divider} />
 
           <div className={styles.searchField}>
-            <label className={styles.searchLabel}>Precio máximo</label>
+            <label className={styles.searchLabel}>{t("searchPrice")}</label>
             <select className={styles.searchSelect}>
-              <option>Sin límite</option>
+              <option>{t("searchPriceAll")}</option>
               <option>€300.000</option>
               <option>€500.000</option>
               <option>€750.000</option>
@@ -72,35 +74,32 @@ export default function Hero() {
             </select>
           </div>
 
-          <button className={styles.searchButton}>
-            Buscar
-          </button>
+          <button className={styles.searchButton}>{t("searchButton")}</button>
         </div>
 
         {/* Stats bar */}
         <div className={styles.statsRow}>
           <div className={styles.stat}>
             <span className={styles.statValue}>100%</span>
-            <span className={styles.statLabel}>Fiabilidad</span>
+            <span className={styles.statLabel}>{t("statReliability")}</span>
           </div>
           <div className={styles.stat}>
             <span className={styles.statValue}>7+</span>
-            <span className={styles.statLabel}>Años en el sector</span>
+            <span className={styles.statLabel}>{t("statYears")}</span>
           </div>
           <div className={styles.stat}>
             <span className={styles.statValue}>97%</span>
-            <span className={styles.statLabel}>Satisfacción</span>
+            <span className={styles.statLabel}>{t("statSatisfaction")}</span>
           </div>
           <div className={styles.stat}>
             <span className={styles.statValue}>95%</span>
-            <span className={styles.statLabel}>Éxito en cierres</span>
+            <span className={styles.statLabel}>{t("statSuccess")}</span>
           </div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <div className={styles.scrollIndicator}>
-        <span className={styles.scrollText}>Descubre más</span>
+        <span className={styles.scrollText}>{t("scrollMore")}</span>
         <div className={styles.scrollLine} />
       </div>
     </section>

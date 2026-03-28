@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import styles from "./PropertyCard.module.css";
 
 interface PropertyCardProps {
@@ -21,6 +24,8 @@ export default function PropertyCard({
   area,
   tag,
 }: PropertyCardProps) {
+  const t = useTranslations("properties");
+
   return (
     <article className={styles.card}>
       <div className={styles.imageWrapper}>
@@ -44,14 +49,14 @@ export default function PropertyCard({
             <>
               <div className={styles.spec}>
                 <span className={styles.specValue}>{beds}</span>
-                <span className={styles.specLabel}>Dorm.</span>
+                <span className={styles.specLabel}>{t("beds")}</span>
               </div>
               <div className={styles.specDivider} />
             </>
           )}
           <div className={styles.spec}>
             <span className={styles.specValue}>{baths}</span>
-            <span className={styles.specLabel}>Baños</span>
+            <span className={styles.specLabel}>{t("baths")}</span>
           </div>
           <div className={styles.specDivider} />
           <div className={styles.spec}>
@@ -62,7 +67,7 @@ export default function PropertyCard({
 
         <div className={styles.footer}>
           <span className={styles.price}>{price}</span>
-          <a href="#" className={styles.viewBtn}>Detalles →</a>
+          <a href="#" className={styles.viewBtn}>{t("details")} →</a>
         </div>
       </div>
     </article>
