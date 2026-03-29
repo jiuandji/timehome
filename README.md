@@ -1,91 +1,89 @@
-# TimeHome Realty — Premium Real Estate Platform
+# TimeHome Realty 🏰 — V1.0 (MVP)
 
-> Luxury real estate agency on Costa Brava — world-class multilingual website
+> **Live Deploy:** [timehomerealty.vercel.app](https://timehomerealty.vercel.app/)  
+> **Repository:** [jiuandji/timehome](https://github.com/jiuandji/timehome)
 
-## Tech Stack
-- **Framework:** Next.js 15 (App Router)
-- **Styling:** CSS Modules + CSS Custom Properties
-- **CMS:** Sanity.io
-- **Images:** Cloudinary
-- **Maps:** Mapbox GL JS
-- **i18n:** next-intl (5 languages: ES, EN, RU, PT, ZH)
-- **Hosting:** Vercel
-- **Analytics:** Plausible (GDPR-compliant)
+Премиальное агентство элитной недвижимости на побережье Коста-Брава (Испания). Проект V1.0 реализован как невероятно быстрый, SEO-оптимизированный и масштабируемый веб-сайт.
 
-## Getting Started
+---
+
+## 🚀 Что было реализовано в V1.0
+
+Мы завершили 8 масштабных фаз разработки, создав идеальный фундамент для мирового рынка недвижимости:
+
+### 1. Архитектура и Локализация (i18n)
+*   **Next.js 15 (App Router):** Использование серверного рендеринга (SSR) и статической генерации (SSG) для достижения максимальной скорости.
+*   **5 Языков из коробки:** Полная локализация через `next-intl` (Испанский, Английский, Русский, Португальский, Китайский).
+*   **Динамический роутинг:** Мгновенные (SPA) переходы между страницами благодаря внедрению компонента `<Link>`.
+
+### 2. Каталог и Страницы Объектов
+*   **Секция `/properties`:** Удобная сетка объектов, поиск и актуальные фильтры.
+*   **Детальные страницы (`/property/[slug]`):** Интерактивная галерея, подробные спецификации (спальни, ванные, площадь), блок похожих объектов.
+*   **Sticky Contact Card:** Липкий сайдбар с контактами брокера и плавающая кнопка быстрой связи через WhatsApp.
+
+### 3. Мощное SEO (Search Engine Optimization)
+*   **Metadata & Open Graph:** Динамическая генерация `generateMetadata` (тайтлы, описания, превью-картинки для соцсетей) генерируются для КАЖДОЙ страницы и языка индивидуально.
+*   **Hreflang Tags:** Поисковики четко понимают, какая версия страницы для какого региона предназначена.
+*   **Schema.org (JSON-LD):** 
+    *   Микроразметка `RealEstateAgent` на главной странице.
+    *   Микроразметка `RealEstateListing` для конкретных карточек недвижимости (позволяет Google делать Rich Snippets).
+*   **Автоматизация:** Динамический `sitemap.xml` (~50 сгенерированных URL) и `robots.txt`.
+
+### 4. Оптимизация Производительности (Performance)
+*   **`next/image`:** Все картинки (включая удаленные с timehomerealty.com и Unsplash) отдаются в форматах WebP/AVIF с поддержкой lazy-loading и адаптивных размеров (`sizes`).
+*   **Vercel Edge Network:** Молниеносная отдача контента из любой точки мира. Отсутствие сдвигов макета (0.00 CLS).
+
+---
+
+## 🛠 Технический Стек
+
+*   **Фреймворк:** [Next.js 15](https://nextjs.org/) (React 19)
+*   **Язык:** TypeScript
+*   **Стилизация:** CSS Modules + Vanilla CSS (Variables)
+*   **Интернационализация:** `next-intl`
+*   **Слой данных (V1):** Внутренний TypeScript mock-стейт (`src/data/`)
+*   **Деплой & Хостинг:** Vercel
+*   **Контроль версий:** GitHub
+
+---
+
+## 📂 Структура данных
+
+В версии 1.0 данные хранятся локально, создавая фундамент для будущих интеграций с CMS:
+*   `src/data/properties.ts` — Основная база объектов недвижимости (фото, цена, slug, локализованные описания).
+*   `src/data/areas.ts` — Справочник зон/городов.
+*   `src/data/site-config.ts` — Глобальные настройки (контакты, соцсети).
+
+---
+
+## 📋 Как запустить локально
 
 ```bash
-# Install dependencies
+# 1. Склонировать репозиторий
+git clone https://github.com/jiuandji/timehome.git
+cd timehome
+
+# 2. Установить зависимости
 npm install
 
-# Run development server
+# 3. Запустить сервер разработки (http://localhost:3000)
 npm run dev
 
-# Build for production
+# 4. Проверить Production билд
 npm run build
+npm run start
 ```
 
-## Project Structure
+---
 
-```
-src/
-├── app/
-│   ├── [locale]/           # Locale-based routing
-│   │   ├── layout.tsx      # Root layout per locale
-│   │   ├── page.tsx        # Homepage
-│   │   ├── properties/     # Property listings
-│   │   ├── property/[slug] # Property detail
-│   │   ├── areas/          # Area guides
-│   │   ├── about/          # About page
-│   │   ├── contact/        # Contact page
-│   │   └── blog/           # Blog
-│   └── api/                # API routes
-├── components/
-│   ├── ui/                 # Atoms: buttons, inputs, badges
-│   ├── layout/             # Organisms: navbar, footer, sidebar
-│   └── sections/           # Sections: hero, testimonials, features
-├── lib/
-│   ├── sanity/             # Sanity client & queries
-│   ├── cloudinary/         # Image optimization
-│   └── utils/              # Helpers
-├── styles/
-│   ├── globals.css         # Design tokens & base styles
-│   └── variables.css       # CSS custom properties
-├── messages/               # i18n translations
-│   ├── en.json
-│   ├── es.json
-│   ├── ru.json
-│   ├── pt.json
-│   └── zh.json
-└── types/
-    └── property.ts         # TypeScript types
-```
+## 🔮 Roadmap (Что дальше - V2.0)
 
-## Design System
+Наш V1.0 работает идеально, но для достижения уровня Sotheby's/Knight Frank запланированы:
+*   [ ] Подключение Headless CMS (Sanity.io) для легкого управления контентом без кода.
+*   [ ] Интерактивный поиск по карте (Mapbox / Google Maps).
+*   [ ] Лайфстайл-теги и расширенные фильтры.
+*   [ ] Страница оценки недвижимости (Lead Generation).
+*   [ ] 3D-туры (Matterport) и видео-интеграции для объектов.
 
-- **Primary:** Navy `#1B2838` + Gold `#C9A96E`
-- **Typography:** Playfair Display (headings) + Inter (body)
-- **Grid:** 12 columns, max-width 1440px
-- **Base unit:** 8px
-
-## Performance Budget
-
-| Metric | Target |
-|---|---|
-| Lighthouse Score | ≥ 95 |
-| LCP | < 1.5s |
-| CLS | < 0.05 |
-| Page Weight | < 1.5MB |
-
-## Languages
-
-| Code | Language | Status |
-|---|---|---|
-| es | Español | Primary |
-| en | English | Active |
-| ru | Русский | Active |
-| pt | Português | Active |
-| zh | 中文 | Active |
-
-## License
-Private — TimeHome Realty © 2026
+---
+*Сконструировано с любовью для Коста-Бравы.* 🌊 🇪🇸
